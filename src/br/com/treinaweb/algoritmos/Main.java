@@ -2,6 +2,11 @@ package br.com.treinaweb.algoritmos;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        // |------------------------------
+        // |  0  |  1  |  2  |  3  |  4  |
+        // |------------------------------
+        // |     |     |     |     |     |
+        // |------------------------------
+        int[] numeros = new int[5];
     }
 }

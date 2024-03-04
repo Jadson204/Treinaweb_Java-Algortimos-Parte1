@@ -25,6 +25,7 @@ public class Main {
         for (int i = 0; i < numeros.length; i++) {
             if (numeros[i] == alvo) {
                 posicaoResultado = i;
+                break; // Interrompe a varredura caso o número pesquisado seja encontrado
             }
         }
         if (posicaoResultado < 0) {

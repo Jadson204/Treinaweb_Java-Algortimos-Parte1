@@ -18,24 +18,41 @@ public class Main {
             numeros[i] = numero;
         }
         // ** Busca linear
-        System.out.println("** BUSCA LINEAR **");
-        System.out.println("Digite o número a ser pesquisado: ");
-        int alvo = scan.nextInt();
-        int posicaoResultado = -1;
-        for (int i = 0; i < numeros.length; i++) {
-            if (numeros[i] == alvo) {
-                posicaoResultado = i;
-                break; // Interrompe a varredura caso o número pesquisado seja encontrado
-            }
-        }
-        if (posicaoResultado < 0) {
-            System.out.println("Elemento não foi encontrado!!!");
-        } else {
-            System.out.println(String.format("O número %d foi encontrado na posição %d", alvo, posicaoResultado));
-        }
+//        System.out.println("** BUSCA LINEAR **");
+//        System.out.println("Digite o número a ser pesquisado: ");
+//        int alvo = scan.nextInt();
+//        int posicaoResultado = -1;
+//        for (int i = 0; i < numeros.length; i++) {
+//            if (numeros[i] == alvo) {
+//                posicaoResultado = i;
+//                break; // Interrompe a varredura caso o número pesquisado seja encontrado
+//            }
+//        }
+//        if (posicaoResultado < 0) {
+//            System.out.println("Elemento não foi encontrado!!!");
+//        } else {
+//            System.out.println(String.format("O número %d foi encontrado na posição %d", alvo, posicaoResultado));
+//        }
         // FIM: Busca linear
-        System.out.println("Vetor: ");
+
+        // ** Selection Sort
+        for (int i =0; i < numeros.length; i++) {
+            int indiceDoMenor = i;
+            for (int j = i + 1; j < numeros.length; j++) {
+                if (numeros[j] < numeros[indiceDoMenor]) {
+                    indiceDoMenor = j;
+                }
+            }
+            int temp = numeros[indiceDoMenor];
+            numeros[indiceDoMenor] = numeros[i];
+            numeros[i] = temp;
+        }
+        System.out.println("Vetor ordenado: ");
         imprimirArray(numeros);
+        // ** Fim Selection Sort
+
+//        System.out.println("Vetor: ");
+//        imprimirArray(numeros);
         scan.close();
     }
 

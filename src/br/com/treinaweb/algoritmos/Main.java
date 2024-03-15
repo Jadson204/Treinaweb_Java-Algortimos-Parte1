@@ -52,8 +52,29 @@ public class Main {
         // ** Fim Selection Sort
 
         // ** Busca Binária
-
-        // 1, 3, 4, 6, 7
+        int resultado = -1;
+        int inicio = 0;
+        int fim = numeros.length -1;
+        int meio = 0;
+        System.out.println("Digite o elemento a ser econtrado: ");
+        int alvo = scan.nextInt();
+        while (inicio <= fim) {
+            meio = (inicio + fim) / 2;
+            if (numeros[meio] < alvo) {
+                inicio = meio + 1;
+            } else if (numeros[meio] > alvo) {
+                fim = meio - 1;
+            } else if (numeros[meio] == alvo) {
+                resultado = meio;
+                break;
+            }
+        }
+        if (resultado < 0) {
+            System.out.println("Elemento não encontrado!");
+        } else {
+            System.out.println(String.format("O número %d está na posição %d", alvo, resultado));
+        }
+        // ** Fim Busca Binaria
 
 //        System.out.println("Vetor: ");
 //        imprimirArray(numeros);

@@ -51,6 +51,10 @@ public class Main {
         imprimirArray(numeros);
         // ** Fim Selection Sort
 
+        // ** Busca Binária
+
+        // 1, 3, 4, 6, 7
+
 //        System.out.println("Vetor: ");
 //        imprimirArray(numeros);
         scan.close();
